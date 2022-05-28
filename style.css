@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+*,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    /* scroll-behavior: smooth ; */
+}
+
+/* --------------------------------------Utility Class------------------------------------ */
+
+.container{
+    max-width: 1100px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    padding: 0.5em 2em;
+    margin-top: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-weight: 500;
+}
+
+.btn-primary{
+    color: #fff;
+}
+
+/* ------------------------------------- Navbar Styling ---------------------------------- */
+
+/* For PC */
+
+.navbar input[type="checkbox"], .navbar .burger-lines{
+    display: none;
+}
+
+.menu-items li{
+    display: inline;
+    list-style-type: none;
+    font-size: 1.8rem;
+    padding: 0 0.5em;
+}
+
+.navbar{
+    box-shadow: 0px 7px 10px rgba(170, 170, 170, 0.486);
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    color: #000;
+    opacity: 0.9;
+    z-index: 100;
+}
+
+.navbar .nav-container img[alt="Logo"]{
+    width: 80px;
+    height:65px;
+    opacity: 10;
+    /* border: 2px red solid; */
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.menu-items li a{
+    color: black;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+    /* text-transform: uppercase; */
+}
+
+.navbar a:hover{
+    color: #117964;
+    
+}
+
+/* --------------------------------Showcase Styling-------------------------- */
+
+.showcase-area{
+    background: linear-gradient(rgba(240,240,240,0.6), rgba(255, 255, 255, 0.3)), url("./Imagesss/pexels-pixabay-302769.jpg");
+    height: 90vh;
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    /* color: #fff; */
+    font-size: 2rem ;
+}
+
+.main-class{
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 600;
+    color: #222;
+}
+
+.about-text .small{
+    font-size: 2rem;
+}
+
+.about-text h1{
+    font-weight: 400;
+}
+
+/* ---------------------------------------About Us Styling ------------------------ */
+
+#about{
+    background: #f4f4f5;
+    padding: 30px 0px;
+}
+
+.about-text p{
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.about-text h1{
+    font-size: 3.2rem;
+}
+
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-evenly; */
+    align-items: center; 
+    /* border: 2px solid purple; */
+    
+}
+
+.about-text{
+    padding: 20px;
+    flex:1 1 400px;
+    transform: translateX(50%);
+    order: 2;
+    opacity: 0;
+    animation: slide 1s 2s ease-in-out forwards;
+} 
+
+@keyframes slide{
+    100%{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.about-image{
+    padding: 20px;
+    flex:1 1 400px;
+    order: 1;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: slide2 1s 2s ease forwards ;
+}
+
+@keyframes slide2{
+    100%{
+        transform: translate(0%);
+        opacity: 1;
+    }
+}
+
+.about-image img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.about-image img:hover{
+    box-shadow: 5px 5px 10px grey;
+}
+
+/* ----------------------------------Catalogue Styling--------------------------------- */
+
+#catalogue{
+    padding: 5rem 0;
+}
+
+#catalogue h1{
+    font-size: 3.2rem;
+    text-align:center;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    color: #444;
+}
+
+#catalogue .catalogue-item{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.catalogue-item .item{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.type-img img{
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+
+.type-img{
+    position: relative;
+}
+
+.type-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-50%,-300%);
+    transition: all 0.3s ease-in-out;
+}
+
+.type-img:hover .type-text{
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+
+.catalogue-item h2{
+    text-align: center;
+    color: rgb(255, 245, 245);
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+
+.catalogue-item a{
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.item .type-img::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    z-index: 5;
+    position: absolute;
+    top: 0px ;
+    left: 0px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+}
+
+.type-img:hover::after{
+    opacity: 0.7;
+}
+
+.btn{
+    background-color: #168083;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.btn:hover{
+    background-color: #157377;
+
+}
+
+/* ----------------------------------------Menu Styling------------------------------------- */
+
+/* .menu-main-heading{
+    text-align: center;
+    font-size: 4rem;
+    font-weight: normal;
+    color:#666;
+    text-transform: uppercase;
+}
+
+.menu-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 30px ;
+
+}
+
+.menu-item-menu{
+    display: flex;
+    flex: 1 1 400px;
+    margin-bottom: 4rem;
+    justify-content: space-evenly;
+}
+
+.menu-item-menu .menu-image img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.menu-image img:hover{
+    box-shadow: 4px 4px 10px #444;
+}
+
+.menu-wrapper .menu-description{
+    margin: auto 3rem;
+}
+
+.menu-description .menu-title{
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #333;
+}
+
+.menu-description p{
+    font-size: 1.4rem;
+    font-weight: 500;
+} */
+
+/* -----------------------------------------Contact Page Styling--------------------------------------------- */
+
+#contact{
+    padding: 5rem 0;
+    background-color: #f1f1f1;
+}
+
+#contact .contact-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-image{
+    flex: 1 1 300px;
+    margin: auto 2rem;
+}
+
+.contact-details{
+    padding-top: 4rem;
+    flex:1 1 300px;
+    margin: auto 2rem;
+    font-size: 1.4rem;
+}
+
+.contact-details i{
+    color:red;
+    padding: 0 1rem;
+}
+
+.contact-details h2{
+    margin-bottom: 1rem; 
+    font-weight: normal;
+}
+
+.contact-details p{
+    margin-bottom: 1rem;
+    font-weight: 500;
+    padding-left: 3.8rem;
+    font-size: 1.6rem;
+}
+
+.contact-image img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 5px 5px 10px #666;
+} 
+
+/* --------------------------------------------Footer Styling----------------------------------------- */
+
+
+
+section#footer{
+    padding: 1rem;
+    background-color: #111;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+.footer-content i{
+    color: white;
+    padding: 5px;
+}
+
+.footer-content a{
+    color: #f1f1f1;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* -------------------------------------------Media Queries For Responsiveness---------------------- */
+
+
+@media (max-width: 768px){
+
+    .navbar{
+        opacity: 0.95;
+    }
+
+    .navbar input[type="checkbox"], .navbar .burger-lines{
+        display: block;
+    }   
+
+    .nav-container{
+        display: block;
+        position: relative;
+    }
+    
+    .menu-items li{
+        display: block;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .menu-items{
+        margin-top: 40px;
+        transform: translateY(-150%);
+        padding: 3rem;
+        z-index: 5;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #aaa;
+        transition: transform 0.45s ease-in-out;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .menu-items{
+        transform: translateY(0%);
+    } 
+
+    .navbar .nav-container input[type="checkbox"]{
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top:15px;
+        left: 20px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .nav-container img{
+        display: block;
+        margin: 10px auto;
+    }
+
+    .nav-container .burger-lines{
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        top: 15px;
+        left: 24px;
+    }
+
+    .nav-container .burger-lines .line{
+        background: black;
+        width: 100%;
+        height: 4px;
+        border-radius: 10px;
+        display: block;
+        
+    }
+
+    .burger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .burger-lines .line2{
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .burger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .nav-container input[type="checkbox"]:checked ~ .burger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .nav-container input[type="checkbox"]:checked ~ .burger-lines .line2{
+        transform: scaleY(0);
+        /* opacity: 0; */
+    }
+    .nav-container input[type="checkbox"]:checked ~ .burger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+/* ------------------- Catalogue---------------*/
+
+    #catalogue .catalogue-item{
+    flex-direction: column;
+    align-items: stretch; 
+    }
+
+    /* .item:not(:last-child){
+        margin-bottom: 3rem;
+    } */
+}
+
+/* ----------Small Screen----------- */
+
+@media (max-width:500px){
+    html{
+        font:50%
+    }
+
+    .menu-item-menu{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (orientation: landscape) and (max-height:500px) {
+    .showcase-area{
+        height: 50vmax;
+    }
+}
+

@@ -292,58 +292,6 @@ html{
 
 }
 
-/* ----------------------------------------Menu Styling------------------------------------- */
-
-/* .menu-main-heading{
-    text-align: center;
-    font-size: 4rem;
-    font-weight: normal;
-    color:#666;
-    text-transform: uppercase;
-}
-
-.menu-wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 30px ;
-
-}
-
-.menu-item-menu{
-    display: flex;
-    flex: 1 1 400px;
-    margin-bottom: 4rem;
-    justify-content: space-evenly;
-}
-
-.menu-item-menu .menu-image img{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    object-position: center;
-    border-radius: 50%;
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.menu-image img:hover{
-    box-shadow: 4px 4px 10px #444;
-}
-
-.menu-wrapper .menu-description{
-    margin: auto 3rem;
-}
-
-.menu-description .menu-title{
-    font-size: 2.5rem;
-    font-weight: normal;
-    color: #333;
-}
-
-.menu-description p{
-    font-size: 1.4rem;
-    font-weight: 500;
-} */
 
 /* -----------------------------------------Contact Page Styling--------------------------------------------- */
 
